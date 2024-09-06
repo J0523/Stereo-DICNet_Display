@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)file:///C:/users/%E5%90%B4%E6%B6%B5/desktop/12.html -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stereo-DICNet位移可视化展示</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .image-item {
+            margin: 10px;
+        }
+        .image-item img {
+            width: 300px;
+            height: 200px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin: 0 auto;
+        }
+        .image-item p {
+			max-width: 900px; 
+            margin-top: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Stereo-DICNet位移可视化展示</h1>
+	<p>------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+
+    <h2>图像输入</h2>
+    <div class="image-container">
+        <div class="image-item">
+            <a href="file:///C:/users/%E5%90%B4%E6%B6%B5/desktop/D" target="_blank">
+                <img src="./Stereo-DICNet位移可视化展示_files/rqCmAzOIVhjf1gt.png">
+            </a>
+            <p>左右相机拍摄到的参考图像（红框）</p>
+			<p>------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+        </div>
+    </div>
+
+    <h2>二维位移场预测</h2>
+    <div class="image-container">
+        <div class="image-item">
+            <a href="file:///C:/users/%E5%90%B4%E6%B6%B5/desktop/%E9%93%BE%E6%8E%A51" target="_blank">
+                <img src="./Stereo-DICNet位移可视化展示_files/EOhVfpBQ3kmNyXW.png">
+            </a>
+            <p>这张图展示了Stereo-DICNet（上）和传统方法ALDIC（中）在二维位移场上的对比效果，以及两者的偏差（下）</p>
+			<p>------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+        </div>
+    </div>
+
+    <h2>三维预测位移</h2>
+    <div class="image-container">
+        <div class="image-item">
+            <a href="file:///C:/users/%E5%90%B4%E6%B6%B5/desktop/%E9%93%BE%E6%8E%A53" target="_blank">
+                <img src="./Stereo-DICNet位移可视化展示_files/KZc2AOvHFWjaliu.png" alt="3D_Displacement.png">
+            </a>
+            <p>该图展示了经过拉伸后的样本沿着U（X），V（Y）、W（Z）三个维度形变</p>
+			<p>------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+        </div>
+    </div>
+
+    <h2>Stereo-DICNet和ALDIC方法的平均绝对误差MAE</h2>
+    <div class="image-container">
+        <div class="image-item">
+            <a href="file:///C:/users/%E5%90%B4%E6%B6%B5/desktop/%E9%93%BE%E6%8E%A53" target="_blank">
+                <img src="./Stereo-DICNet位移可视化展示_files/8GRs6kyVHrpcWvg.png" alt="MAE_and_MAX_Deformation.png">
+            </a>
+            <p>该图展示了在整个拉伸过程中，在三个方向上的预测变形值的MAE。我们的方法的在U，V和W方向上最大不超过0.005毫米，0.015mm，0.01毫米（因为对象的变形范围大于我们的训练数据集，所以MAE在531帧突然增加）</p>
+        </div>
+    </div>
+
+
+</body></html>
